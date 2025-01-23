@@ -1,0 +1,37 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-right: 150px;
+    padding-left: 150px;
+
+}
+a {
+    color:#DA001E;
+}
+
+p {
+    font-family: 'bubbleboddy_neue';
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.contact_info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-size: 1.5em;
+}
+
+.mail {
+    display: flex;
+    justify-content: center;
+}
+.contact_links {
+    display: flex;
+    justify-content: center;
+    align-content: space-around;
+    width: 90%;
+}
