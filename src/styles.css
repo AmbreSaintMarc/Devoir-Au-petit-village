@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'bubbleboddy_neue';
+    src: url('font/bubbleboddy_neue/bubbleboddyneue-regular trial.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('font/Comfortaa/Comfortaa-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

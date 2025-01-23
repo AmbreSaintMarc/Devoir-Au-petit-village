@@ -1,15 +1,19 @@
 @media screen and (max-width: 767px) { 
-
+    .logo {
+        width: 10vw;
+        padding-left: 10px;
+    }
 }
 
 @media screen and (min-width: 768px) {   
-     
+    .logo {
+        width: 8vw;
+    }
 } 
 
 @media (min-width: 1200px) {    
-    .nav_logo {
-        height: 90%;
-        width: 90%;
+    .logo {
+        width: 7vw;
     }
 }
 
@@ -17,25 +21,36 @@
     background-color: #DA001E;
     color: #151217 ;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 20px;
-}
-
-.menu {
-    display: flex;
-    justify-content: end;
+    flex-flow: row wrap;
     justify-content: space-between;
-    padding-right: 20px;
-    width: 20%;
+    align-items: center;
+    padding: 10px;
 }
 
 a {
     text-decoration: none;
-    color:#151217;
+    color:#FDD90B;
+}
+
+.nav_logo {
+    width: 30%;
+    display: flex;
+    justify-content: left;
+    align-content: center;
+    padding-left: 5px;
+}
+
+.nav_menu {
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    font-family: 'Comfortaa';
+    font-weight: 600;
+    font-size: larger;
 }
 
 .logo {
-    width: 50px;
-    height: 50px;
+    width: 7vw;
+
 }
