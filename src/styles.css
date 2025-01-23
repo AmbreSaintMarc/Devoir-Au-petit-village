@@ -11,3 +11,9 @@
     font-weight: normal;
     font-style: normal;
 }
+
+h1 {
+    font-family: 'Comfortaa';
+    font-size: 3.5em;
+    color: #DA001E;
+}
