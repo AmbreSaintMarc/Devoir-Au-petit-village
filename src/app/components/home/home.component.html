@@ -10,29 +10,13 @@
         <button></button>
     </div>
 
+
     <div class="products">
-        <div class="product1">
-            <a routerLink="">
-                <img src="./figurine-asterix-embleme.jpg" alt="Photo de la figurine amblématique d'Astérix">
-            </a>
-        </div>
-        <div class="product2">
-            <a routerLink="">
-                <img src="./figurine-obelix-et-idefix-asterix-et-cleopatre.webp" alt="Photo d'une figurine d'Obélix et Idéfix">
-            </a>
-        </div>
-        <div class="product3">
-            <img src="" alt="Photo d'une figurine">
-        </div>
-        <div class="product4">
-            <img src="" alt="Photo d'une figurine">
-        </div>
-        <div class="product5">
-            <img src="" alt="Photo d'une figurine">
-        </div>
-        <div class="product6">
-            <img src="" alt="Photo d'une figurine">
-        </div>
+        @for(product of products; track product) {
+                    
+            <app-product-item [product]="product"></app-product-item>
+        }
+
     </div>
 
 </main>

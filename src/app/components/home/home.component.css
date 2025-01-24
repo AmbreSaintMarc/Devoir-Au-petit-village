@@ -25,3 +25,13 @@ img {
     width: 300px;
     height: 300px;
 }
+
+.products {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    width: 60%;
+    padding: 20px;
+}
