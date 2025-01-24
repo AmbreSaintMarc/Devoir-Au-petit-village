@@ -30,6 +30,7 @@
 a {
     text-decoration: none;
     color:#FDD90B;
+    text-transform: uppercase;
 }
 
 .nav_logo {
