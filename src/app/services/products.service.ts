@@ -1,6 +1,4 @@
 import { Injectable } from '@angular/core';
-import { ProductComponent } from '../components/product/product.component';
-import { ActivatedRoute } from '@angular/router';
 
 export type Product= {
   name: string;

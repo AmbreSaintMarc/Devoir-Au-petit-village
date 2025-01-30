@@ -1,0 +1,6 @@
+<div class="product-item" (click)="navigateToProductDetails()" >
+
+    <h2 class="product-item_name">{{product().name}}</h2>
+    <img src="{{product().photo}}" alt="Photo d'une figurine">
+    <!-- I put this line in comment to avoid the error it was creating <div class="product-item_price">{{product().price | sortByPrice }} €</div>  --> 
+</div>
