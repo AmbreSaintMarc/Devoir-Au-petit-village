@@ -22,7 +22,17 @@ export class HomeComponent implements OnInit{
     this.products = this.service.getProducts();
   }
 
-  SortByPricePipe: "lowest" | "biggest" = "lowest";
   
+  sortOrder: "none" | "lowest" | "biggest" = "none";
+ 
+  sortByLowest() {
+
+    this.sortOrder = "lowest";
+  }
+
+  sortByBiggest() {
+
+    this.sortOrder = this.sortOrder === 'biggest' ? 'lowest' : 'biggest';
+  }
 }
 

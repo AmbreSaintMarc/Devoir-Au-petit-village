@@ -5,18 +5,30 @@ import { Product, ProductsService } from '../services/products.service';
 
 @Pipe({
   name: 'sortByPrice',
+  pure: true
 })
 export class SortByPricePipe implements PipeTransform {
   
-  transform(value: Product[], order: "lowest" | "biggest" = "lowest"): Product[] {
-  
-    return value.sort((a, b) => {
-      if (order === "lowest") {
-        return a.price - b.price;
-      } else if (order === "biggest") {
-        return b.price - a.price;
-      }
-      return 0;
+  transform(value: Product[] | null, order: "none" | "lowest" | "biggest" = "lowest"): Product[] {
+    
+    
+    
+    if(!value || value.length ===0) {
+      return[];
+    }
+
+    if(order === 'none') {
+      return value;
+    }
+
+    return [...value].sort((a, b) => {
+      const priceA=a.price??0;
+      const priceB=b.price??0;
+
+      return order ==="lowest"?priceA - priceB:
+      priceB-priceA;
+
+
     });
     
   }
