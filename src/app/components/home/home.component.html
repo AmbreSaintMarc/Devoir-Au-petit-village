@@ -5,17 +5,23 @@
         <P>“Au petit village” est une entreprise qui confectionne des <strong>figurines</strong> inspirées de la bande dessinée <strong>Astérix et Obélix</strong>.</P>
     </div>
 
-    <div class="search-bar">
-        <input type="text" placeholder="Recherche">
-        <p class="search-bar_sort">Trier par ordre : </p>
-        <button (click)="sortByLowest()">Croissant</button>
-        <button (click)="sortByBiggest()">Décroissant</button>
+    <div class="filter-bar">
+
+        <div class="search-bar">
+            <input type="text" placeholder="Filtrer par nom" #filter />
+            <button type="button" (click)="filterResults(filter.value)">Recherche</button>
+        </div>
+
+        <div class="sort-bar">
+            <p class="search-bar_sort">Trier par ordre : </p>
+            <button (click)="sortByLowest()">Croissant</button>
+            <button (click)="sortByBiggest()">Décroissant</button>
+        </div>
 
     </div>
 
-
     <div class="products">
-        @for(product of products |  sortByPrice: sortOrder ; track product) {
+        @for(product of filteredProductsList |  sortByPrice: sortOrder ; track product) {
                     
             <app-product-item [product]="product"></app-product-item>
         }

@@ -15,6 +15,7 @@ h1 {
 
 .presentation {
     font-size: 1.5em;
+    padding-bottom: 50px;
 }
 
 strong {
@@ -36,19 +37,25 @@ img {
     padding: 20px;
 }
 
-.search-bar {
+.filter-bar {
     display: flex;
     flex-direction: row;
     height: 30px;
     width: 100%;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    background-color:#FDD90B;
+    gap: 20px;
+    padding: 15px;
 }
 
+.sort-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 .search-bar_sort {
     font-family: 'bubbleboddy_neue';
-
 }
 
 button {
@@ -57,4 +64,22 @@ button {
     background-color: #DA001E;
     border-color: #FDD90B;
     color: #FDD90B;
+}
+
+
+@media (max-width: 769px) {
+    .presentation {
+        width: 400px;
+    }
+}
+
+@media (min-width: 770px) {
+    .presentation {
+        width: 600px;
+    }
+}
+@media (min-width: 1200px) {
+    .presentation {
+        width: 1000px;
+    }
 }
