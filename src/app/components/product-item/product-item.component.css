@@ -12,3 +12,9 @@ img {
     font-family: monospace;
     font-weight: 600;
 }
+
+a {
+    text-decoration: none;
+    color: #151217;
+}
+

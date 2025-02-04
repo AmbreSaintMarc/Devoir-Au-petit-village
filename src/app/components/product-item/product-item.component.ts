@@ -1,10 +1,12 @@
-import { Component, inject, input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { Product } from '../../services/products.service';
 import { Router } from '@angular/router';
+import { RouterModule } from '@angular/router';
+
 
 @Component({
   selector: 'app-product-item',
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './product-item.component.html',
   styleUrl: './product-item.component.css'
 })

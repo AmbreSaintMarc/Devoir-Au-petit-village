@@ -35,3 +35,26 @@ img {
     width: 60%;
     padding: 20px;
 }
+
+.search-bar {
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-bar_sort {
+    font-family: 'bubbleboddy_neue';
+
+}
+
+button {
+    font-family: 'bubbleboddy_neue';
+    border-radius: 5px;
+    background-color: #DA001E;
+    border-color: #FDD90B;
+    color: #FDD90B;
+}

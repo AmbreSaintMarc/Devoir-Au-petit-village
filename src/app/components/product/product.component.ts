@@ -1,6 +1,7 @@
-import { Component, OnInit, input } from '@angular/core';
+import { Component, OnInit, inject, input } from '@angular/core';
 import { Product, ProductsService } from '../../services/products.service';
-import { ProductItemComponent } from '../product-item/product-item.component';
+import { ActivatedRoute } from '@angular/router';
+
 
 
 
@@ -8,20 +9,20 @@ import { ProductItemComponent } from '../product-item/product-item.component';
 
 @Component({
   selector: 'app-product',
-  imports: [ProductItemComponent],
+  imports: [],
   templateUrl: './product.component.html',
   styleUrl: './product.component.css',
   providers: [ProductsService]
 })
 
-export class ProductComponent implements OnInit{
-  public products : Product[] = []
+export class ProductComponent {
+  route: ActivatedRoute = inject(ActivatedRoute);
+  productsService = inject(ProductsService);
+  products: Product | undefined;
+  productsId = Number(this.route.snapshot.params['id']);
 
-  constructor(private service: ProductsService) { }
+  constructor() {
 
-  ngOnInit(): void {
-    this.products = this.service.getProducts();
+    this.products = this.productsService.getProductsById(this.productsId);
   }
-
-  
 }
