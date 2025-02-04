@@ -1,8 +1,11 @@
 
-<div>
-    @for(product of products; track product) {
-                    
-        <app-product-item [product]="product"></app-product-item>
-    }
+<div class="product">
+
+    <h2 class="product-name">{{ products?.name }}</h2>
+    <img src="{{products?.photo}}" alt="Figurine Astérix">
+    <p class="product-price">{{ products?.price}} €</p>
+    <p class="product-description"> {{ products?.description}}</p>
+    <div class="spacer"></div>
 
 </div>
+

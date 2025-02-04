@@ -7,8 +7,9 @@
 
     <div class="search-bar">
         <input type="text" placeholder="Recherche">
-        <button (click)="sortByLowest()">Trier</button>
-        <button (click)="sortByBiggest()">Trier 2</button>
+        <p class="search-bar_sort">Trier par ordre : </p>
+        <button (click)="sortByLowest()">Croissant</button>
+        <button (click)="sortByBiggest()">Décroissant</button>
 
     </div>
 
@@ -18,6 +19,7 @@
                     
             <app-product-item [product]="product"></app-product-item>
         }
+        
 
     </div>
 

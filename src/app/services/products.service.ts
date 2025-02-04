@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 
+
 export type Product= {
   name: string;
   photo: string;
@@ -23,4 +24,8 @@ export class ProductsService {
     return this.products;
   }
 
+  getProductsById(id: number): Product | undefined {
+    return this.products.find((products) => products.id === id);
+
+  }
 }
